@@ -1,0 +1,25 @@
+#include<iostream>
+using namespace std;
+int main(){
+    int b=2;
+    int num;
+    string s=" ";
+    char X= 'A';
+    //cout<<"Enter a  base";
+   //465tfg
+    cin>>b;
+    cout<<"Enter a  number";
+    cin>>num;
+    while (num)
+    {
+        int r = num %b;
+        if (r<=9)
+        s=to_string(r)+ s;
+        else{
+            string t (1,X+r-10);
+              s= t+s;
+        }
+        num /=b;
+    }
+    cout<<s;
+}
